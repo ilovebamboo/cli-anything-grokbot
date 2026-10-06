@@ -1,0 +1,43 @@
+# Local environments, caches and build outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+# Secrets / local agent configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.pi/
+.claude/
+.agent-browser/
+credentials*
+secrets*
+
+# Never commit account state, transcripts, screenshots or real-run evidence
+state/
+artifacts/
+private/
+logs/
+*.log
+*.sqlite*
+*.db*
+*.sock
+LIVE-*.json
+send-*.json
+manage-*.json
+*transcript*.json
+*screenshot*.png
+browser-state*.json
+storage-state*.json

@@ -1,0 +1,14 @@
+cli-anything-grokbot
+An independent, experimental adapter for the Grok Bot desktop application.
+
+Includes an unmodified copy of cli-anything-plugin/repl_skin.py from:
+HKUDS/CLI-Anything — https://github.com/HKUDS/CLI-Anything
+Source revision: 34f5195
+Copyright 2026 HKUDS CLI-Anything Team
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The remaining adapter code and documentation are provided under Apache-2.0.
+Grok Bot, Electron, and other product names belong to their respective owners.
+This repository does not include Grok Bot application binaries, extracted bundles,
+account data, transcripts, credentials, or live test receipts.
+No affiliation with or endorsement by Grok Bot/xAI or HKUDS is implied.

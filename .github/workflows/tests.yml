@@ -1,0 +1,24 @@
+name: Offline tests and public-tree audit
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -e './grokbot/agent-harness[dev]'
+      - name: Offline tests only — no live account
+        env:
+          GROKBOT_LIVE_TESTS: '0'
+        run: python -m pytest grokbot/agent-harness/cli_anything/grokbot/tests -v
+      - name: Reject local/private artifacts in tracked source
+        run: python scripts/check_public_tree.py
